@@ -18,7 +18,7 @@ export default function App() {
     formData.append("file", file);
 
     try {
-      const res = await fetch("/api/fact-check", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || ""}/api/fact-check`, {
         method: "POST",
         body: formData,
       });
