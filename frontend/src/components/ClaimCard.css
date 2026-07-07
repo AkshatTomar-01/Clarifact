@@ -1,0 +1,143 @@
+.claim-card {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.claim-card:last-child { border-bottom: none; }
+
+/* ── Row ── */
+.claim-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.claim-row:hover { background: var(--surface-2); }
+.claim-card.is-expanded .claim-row { background: var(--surface-2); }
+
+.verdict-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.claim-text {
+  flex: 1;
+  font-size: 0.8125rem;
+  color: var(--text-2);
+  line-height: 1.5;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.claim-card.is-expanded .claim-text {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+.verdict-pill {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 99px;
+  border: 1px solid;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.chevron {
+  color: var(--text-3);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.chevron svg { width: 12px; height: 12px; display: block; }
+.chevron.rotated { transform: rotate(180deg); }
+
+/* ── Detail panel ── */
+.claim-detail {
+  padding: 0 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+  background: var(--surface-2);
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.detail-row:last-child { border-bottom: none; }
+
+.detail-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-top: 1px;
+}
+
+.detail-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-3);
+}
+
+.detail-quote {
+  font-size: 0.8125rem;
+  color: var(--text-3);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.detail-value {
+  font-size: 0.8125rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+/* Correction */
+.correction-label { color: var(--amber) !important; }
+.correction-value { color: var(--text) !important; font-weight: 500; }
+
+/* Sources */
+.sources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: var(--text-3);
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  transition: color 0.12s;
+}
+
+.source-link svg { width: 10px; height: 10px; flex-shrink: 0; }
+.source-link:hover { color: var(--text-2); }

@@ -1,0 +1,137 @@
+.loading-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.loading-inner {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Progress bar ── */
+.loading-indicator {
+  height: 2px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.loading-bar {
+  height: 100%;
+  background: var(--text);
+  border-radius: 99px;
+  width: 0%;
+  animation: progress 28s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes progress {
+  0%   { width: 0%; }
+  60%  { width: 72%; }
+  85%  { width: 88%; }
+  100% { width: 94%; }
+}
+
+.loading-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.loading-sub {
+  font-size: 0.8125rem;
+  color: var(--text-3);
+  margin-top: -12px;
+}
+
+/* ── Step list ── */
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.step-item:last-child { border-bottom: none; }
+
+.step-item.step-active { background: var(--surface-2); }
+
+.step-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-item.step-done .step-indicator {
+  background: var(--green-bg);
+  border: 1px solid rgba(34,197,94,0.2);
+  color: var(--green);
+}
+
+.step-item.step-done .step-indicator svg { width: 10px; height: 10px; }
+
+.step-item.step-active .step-indicator {
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+}
+
+.step-item.step-pending .step-indicator {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.dot-spinner {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text);
+  animation: blink 1.1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+.dot-idle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border-2);
+}
+
+.step-label {
+  font-size: 0.8125rem;
+  color: var(--text-3);
+}
+
+.step-item.step-active .step-label {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.step-item.step-done .step-label {
+  color: var(--text-2);
+  text-decoration: line-through;
+  text-decoration-color: var(--border-2);
+}
