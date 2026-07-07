@@ -17,7 +17,8 @@ Built as a "Truth Layer" for marketing content, research documents, or any PDF t
    - ❓ **Unverifiable** — insufficient evidence found
 
 ---
-
+## Demo Link: clarifact-three.vercel.app
+---
 ## Tech Stack
 
 ### Backend
