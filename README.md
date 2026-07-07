@@ -1,5 +1,7 @@
 # Clarifact
 
+**🔗 Live Demo → [clarifact-three.vercel.app](https://clarifact-three.vercel.app)**
+
 An automated fact-checking web app that reads a PDF, extracts every verifiable claim, cross-references each one against live web data, and flags inaccuracies with corrections and sources.
 
 Built as a "Truth Layer" for marketing content, research documents, or any PDF that may contain outdated or hallucinated statistics.
@@ -17,8 +19,7 @@ Built as a "Truth Layer" for marketing content, research documents, or any PDF t
    - ❓ **Unverifiable** — insufficient evidence found
 
 ---
-## Demo Link: clarifact-three.vercel.app
----
+
 ## Tech Stack
 
 ### Backend
