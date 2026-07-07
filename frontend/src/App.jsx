@@ -51,7 +51,7 @@ export default function App() {
                 <path d="M5 7h4M7 5v4"/>
               </svg>
             </div>
-            <span className="nav-brand-name">FactCheck</span>
+            <span className="nav-brand-name">Clarifact</span>
           </a>
           <span className="nav-pill">AI-Powered</span>
         </div>
